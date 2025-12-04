@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="qtype_gapfill">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mobile/qtype_gapfill.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
