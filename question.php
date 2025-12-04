@@ -548,7 +548,11 @@ class qtype_gapfill_question extends question_graded_automatically_with_countbac
     public function grade_response(array $response) {
         $response = $this->discard_duplicates($response);
         $right = $this->get_num_parts_right($response)[0];
-        $this->fraction = $right / $this->gapcount;
+        if($this->gapcount > 0) {
+            $this->fraction = $right / $this->gapcount;
+        } else {
+            $this->fraction = 0;
+        }
         $grade = [$this->fraction, question_state::graded_state_for_fraction($this->fraction)];
         return $grade;
     }
